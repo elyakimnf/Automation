@@ -1,13 +1,14 @@
-from selenium.webdriver.common.by import By
+from data.helper import Locators
+
 
 class CompleteCheckout:
     def __init__(self, driver):
         self.driver = driver
-        self.success_message = (By.CLASS_NAME, "complete-header")
-        self.home_button = (By.ID, "back-to-products")
+        self.success_message = Locators.success_message
+        self.home_button = Locators.home_button
 
     # Success checkout
-    def success_message(self):
+    def success_checkout(self):
         return self.driver.find_element(*self.success_message).text
 
     # Back to product page

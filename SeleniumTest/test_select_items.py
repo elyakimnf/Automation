@@ -15,8 +15,6 @@ def test_add_multiple_product_to_cart(login_page, product_page, cart_page, num_p
 
     # Verify that the cart contains the item
     product_page.go_to_cart()
-    time.sleep(2)
-
     cart_items = cart_page.get_cart_items()
     assert len(cart_items) == num_products
     time.sleep(5)

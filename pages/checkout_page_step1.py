@@ -1,16 +1,14 @@
-from selenium.webdriver.common.by import By
+from data.helper import Locators
 
-class CheckoutPage:
+
+class CheckoutPage1:
     def __init__(self, driver):
         self.driver = driver
-        self.first_name_field = (By.ID, "first-name")
-        self.last_name_field = (By.ID, "last-name")
-        self.postal_code_field = (By.ID, "postal-code")
-        self.continue_button = (By.ID, "continue")
-        self.cancel_button = (By.ID, "cancel")
-        # complete checkout page
-        self.finish_button = (By.ID, "finish")
-        self.success_message = (By.CLASS_NAME, "complete-header")
+        self.first_name_field = Locators.first_name_field
+        self.last_name_field = Locators.last_name_field
+        self.postal_code_field = Locators.postal_code_field
+        self.continue_button = Locators.continue_button
+        self.cancel_button = Locators.cancel_button
 
     # user input checkout information
     def checkout_info(self, first_name, last_name, postal_code):
@@ -25,11 +23,3 @@ class CheckoutPage:
     # user cancel checkout
     def cancel_checkout(self):
         self.driver.find_element(*self.cancel_button).click()
-
-    # user finish checkout
-    def finish_checkout(self):
-        self.driver.find_element(*self.finish_button).click()
-
-    # user success checkout
-    def get_success_message(self):
-        return self.driver.find_element(*self.success_message).text
