@@ -5,7 +5,7 @@ The project is structured to follow best practices, including Page Object Model 
 
 ---
 
-##**Setup Instructions**##
+## **Setup Instructions**
 1. **Prerequisites**
    - Install Python (version 3.8 or later).
    - Install Google Chrome or a browser of your choice.
@@ -72,12 +72,12 @@ project-root/
 ```
 ---
 
-##**Key Features in Code**##
-1. Reusable Page Objects:
-   Page classes are created for login, cart, and checkout pages in the pages/ folder.
+## **Key Features in Code**
+1. **Reusable Page Objects**:
+   - Page classes are created for login, cart, and checkout pages in the pages/ folder.
 
-2. Assertions:
-   Test scripts include meaningful assertions to verify expected outcomes.
+2. **Assertions**:
+   - Test scripts include meaningful assertions to verify expected outcomes.
    
-4. Modular Design:
-   Common locators are stored in helpers/helper.py for easy updates and reusability.
+4. **Modular Design**:
+   - Common locators are stored in helpers/helper.py for easy updates and reusability.
